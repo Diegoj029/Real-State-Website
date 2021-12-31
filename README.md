@@ -1,7 +1,7 @@
 # Real-State-Website
 EasyBroker selection process project. 'Inmobiliaria de Prueba', a real estate agency wants to create a website connected to their EasyBroker account with all their published properties. The website consists of two main pages: the properties list page and the property page.
 
-![Landing page](/images/landing page.jpg)
+![Landing page](/images/landing screen.jpeg)
 
 ## Contents
 * [General information](#general-information)
@@ -27,7 +27,7 @@ The website's main page. A paginated list containing all the published propertie
 <details><summary>Show Image</summary>
 <p>
 
-![Main page](./images/main screen.jpg)
+    ![Main page](/images/main screen.jpeg)
 
 </p>
 </details>
@@ -38,7 +38,7 @@ To quickly scroll to the properties section on the main screen, press the 'Descu
 <details><summary>Show Image</summary>
 <p>
 
-![Landing page](./images/landing page.jpg)
+![Landing page](./images/landing screen.jpeg)
 
 </p>
 </details>
@@ -47,7 +47,7 @@ You can navigate using the buttons on the screen's bottom:
 <details><summary>Show Image</summary>
 <p>
 
-![Page 2](./images/page 2.jpg)
+![Page 2](./images/page 2.jpeg)
 
 </p>
 </details>
@@ -59,7 +59,7 @@ When a user clicks on a property in the list you should take them to a page that
 <details><summary>Show Image</summary>
 <p>
 
-![Property page](./images/property page.jpg)
+![Property page](./images/property page.jpeg)
 
 </p>
 </details>
