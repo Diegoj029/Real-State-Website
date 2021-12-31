@@ -1,7 +1,7 @@
 # Real-State-Website
 EasyBroker selection process project. 'Inmobiliaria de Prueba', a real estate agency wants to create a website connected to their EasyBroker account with all their published properties. The website consists of two main pages: the properties list page and the property page.
 
-![Landing page](images/landing screen.jpeg)
+![Landing page](landing_screen.jpeg)
 
 ## Contents
 * [General information](#general-information)
@@ -27,7 +27,7 @@ The website's main page. A paginated list containing all the published propertie
 <details><summary>Show Image</summary>
 <p>
 
-    ![Main page](/images/main screen.jpeg)
+![Main page](images/main_screen.jpeg)
 
 </p>
 </details>
@@ -38,7 +38,7 @@ To quickly scroll to the properties section on the main screen, press the 'Descu
 <details><summary>Show Image</summary>
 <p>
 
-![Landing page](images/landing screen.jpeg)
+![Landing page](images/landing_screen.jpeg)
 
 </p>
 </details>
@@ -47,7 +47,7 @@ You can navigate using the buttons on the screen's bottom:
 <details><summary>Show Image</summary>
 <p>
 
-![Page 2](images/page 2.jpeg)
+![Page 2](images/page_2.jpeg)
 
 </p>
 </details>
@@ -59,7 +59,7 @@ When a user clicks on a property in the list you should take them to a page that
 <details><summary>Show Image</summary>
 <p>
 
-![Property page](images/property page.jpeg)
+![Property page](images/property_page.jpeg)
 
 </p>
 </details>
@@ -68,7 +68,7 @@ You can change the image shown by clicking on the navigation arrows or selecting
 <details><summary>Show Image</summary>
 <p>
 
-![Image gallery](images/image gallery.jpeg)
+![Image gallery](images/image_gallery.jpeg)
 
 </p>
 </details>
@@ -80,7 +80,7 @@ After filling the information and writing a message, you'll get a message of suc
 <details><summary>Show Image</summary>
 <p>
 
-![Contact form success](images/form success.jpeg)
+![Contact form success](images/form_success.jpeg)
 
 </p>
 </details>
@@ -89,7 +89,7 @@ The form may warn when there's an unfilled information field:
 <details><summary>Show Image</summary>
 <p>
 
-![Contact form error](images/form error.jpg)
+![Contact form error](images/form_error.jpg)
 
 </p>
 </details>
