@@ -5,31 +5,44 @@
     <div class="col-12">
         <h2>{{ title }}</h2>
     </div>
+    <div class="col-12">
     <div class="row">
         <div class="col-12 col-lg-6">
             <div class="photoGalleryBlock">
                 <div class="largePic">
-                    <a href="#" class="prev">prev</a>
-                    <a href="#" class="next">next</a>
-                    <img class="photo" src="{{ images[0][0] }}" title="{{ images[0][1] }}" width="600px">
+                    {% if image_index == 1: %}
+                        <a href="#" class="prev">prev</a>
+                    {% else: %}
+                        <a href="/property/{{ public_id }}={{ image_index }}" class="prev">prev</a>
+                    {% endif %}
+                    {% if image_index == num_images: %}
+                        <a href="#" class="next">next</a>
+                    {% else: %}
+                        <a href="/property/{{ public_id }}={{ image_index + 2 }}" class="next">next</a>
+                    {% endif %}
+
+                    <img class="photo" src="{{ images[image_index][0] }}" title="{{ images[image_index][1] }}" width="600px" height="300px">
                 </div>
                 <ul class="reset photoGalleryThumbs">
-                    <li>
-                        <a href="#" class="thumb active">
-                            <span class="photo">
-                                <img class="photo" src="{{ images[0][0] }}" title="{{ images[0][1] }}" width="90px">
-                            </span>		
-                        </a>
-                    </li>
-                    {% if num_images > 1 %}
-                        {% for image in images[1:] %}					
-                            <li>
-                                <a href="#" class="thumb">
-                                    <span class="Photo">
-                                        <img class="photo" src="{{ image[0] }}" title="{{ image[1] }}" width="90px">
-                                    </span>		
-                                </a>
-                            </li>
+                    {% if num_images > 1: %}
+                        {% for index in range(num_images): %}
+                            {% if index == image_index: %}
+                                <li>
+                                    <a href="#" class="thumb active">
+                                        <span class="Photo">
+                                            <img class="photo" src="{{ images[index][0] }}" title="{{ images[index][1] }}" width="90px" height="90px">
+                                        </span>		
+                                    </a>
+                                </li>
+                            {% else: %}		
+                                <li>
+                                    <a href="/property/{{ public_id }}={{ index + 1 }}" class="thumb">
+                                        <span class="Photo">
+                                            <img class="photo" src="{{ images[index][0] }}" title="{{ images[index][1] }}" width="90px" height="90px">
+                                        </span>		
+                                    </a>
+                                </li>
+                            {% endif %}		
                         {% endfor %}
                     {% endif %}												
                 </ul>
@@ -41,7 +54,12 @@
             <h4>{{ property_type }}</h4>
             <h3>Ubicación:</h3>
             <h4>{{ location }}</h4>
+            <br>
+            <div class="hero-btns">
+                <a data-scroll href="#contact-us">Me interesa</a>
+            </div>
         </div>
+    </div>
     </div>
     <br>
     <div class="col-12">

@@ -199,6 +199,7 @@ p {
 }
 .navbar {
   padding: 10px 0 0 0;
+  font-size: 1.0rem;
 }
 .navbar-light .navbar-brand {
   margin-right: 10%;
@@ -228,7 +229,7 @@ p {
   5. Photo Gallery
 -------------------------------------------------------------*/
 .photoGalleryBlock{
-  background:#d8dadb;
+  background:#1f1f1f;
   text-align:center;
 }
 .largePic{

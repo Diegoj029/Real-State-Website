@@ -25,8 +25,8 @@ def index(page_number=1):
                             total_properties = total_properties, page_number = page_number, total_pages = total_pages)
 
 
-@app.route("/property/<string:property_id>", methods = ['GET','POST'])
-def property(property_id):
+@app.route("/property/<string:property_id>=<int:image_index>", methods = ['GET','POST'])
+def property(property_id, image_index=1):
     form = Contact_form()
     property = eb.property(str(property_id))
     images = eb.get_images(property)
@@ -41,7 +41,7 @@ def property(property_id):
 
     return render_template("property.html", public_id = property['public_id'], title = property['title'], 
                             property_type = property['property_type'], location = property['location']['name'], 
-                            description = property['description'], images = images, num_images = len(images), form = form)
+                            description = property['description'], images = images, num_images = len(images), image_index = image_index-1, form = form)
 
 if __name__ == '__main__':
     app.run(debug=True)
