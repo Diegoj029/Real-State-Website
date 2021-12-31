@@ -2,6 +2,7 @@
 
 {% block body %}
 <div class="row">
+    <section id="property">
     <div class="col-12">
         <h2>{{ title }}</h2>
     </div>
@@ -10,15 +11,15 @@
         <div class="col-12 col-lg-6">
             <div class="photoGalleryBlock">
                 <div class="largePic">
-                    {% if image_index == 1: %}
-                        <a href="#" class="prev">prev</a>
+                    {% if image_index <= 1: %}
+                        <a href="/property/{{ public_id }}={{ image_index + 1 }}#property" class="prev">prev</a>
                     {% else: %}
-                        <a href="/property/{{ public_id }}={{ image_index }}" class="prev">prev</a>
+                        <a href="/property/{{ public_id }}={{ image_index }}#property" class="prev">prev</a>
                     {% endif %}
-                    {% if image_index == num_images: %}
-                        <a href="#" class="next">next</a>
+                    {% if image_index >= num_images-1: %}
+                        <a href="/property/{{ public_id }}={{ image_index + 1 }}#property" class="next">next</a>
                     {% else: %}
-                        <a href="/property/{{ public_id }}={{ image_index + 2 }}" class="next">next</a>
+                        <a href="/property/{{ public_id }}={{ image_index + 2 }}#property" class="next">next</a>
                     {% endif %}
 
                     <img class="photo" src="{{ images[image_index][0] }}" title="{{ images[image_index][1] }}" width="600px" height="300px">
@@ -36,7 +37,7 @@
                                 </li>
                             {% else: %}		
                                 <li>
-                                    <a href="/property/{{ public_id }}={{ index + 1 }}" class="thumb">
+                                    <a href="/property/{{ public_id }}={{ index + 1 }}#property" class="thumb">
                                         <span class="Photo">
                                             <img class="photo" src="{{ images[index][0] }}" title="{{ images[index][1] }}" width="90px" height="90px">
                                         </span>		
@@ -58,14 +59,13 @@
             <div class="hero-btns">
                 <a data-scroll href="#contact-us">Me interesa</a>
             </div>
+            <br>
         </div>
     </div>
-    </div>
-    <br>
-    <div class="col-12">
         <h3>Descripción</h3> 
         <h4>{{ description }}</h4>
     </div>
+    </section>
     <br><hr>
     <div class="col-12">
         <section id="contact-us" class="contact">
