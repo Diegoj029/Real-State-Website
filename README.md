@@ -1,7 +1,7 @@
 # Real-State-Website
 EasyBroker selection process project. 'Inmobiliaria de Prueba', a real estate agency wants to create a website connected to their EasyBroker account with all their published properties. The website consists of two main pages: the properties list page and the property page.
 
-![Landing page](./images/landing page.jpg)
+![Landing page](/images/landing page.jpg)
 
 ## Contents
 * [General information](#general-information)
