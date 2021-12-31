@@ -54,7 +54,7 @@ You can navigate using the buttons on the screen's bottom:
 
 
 ### Property page
-When a user clicks on a property in the list you should take them to a page that displays all the property's detailed information. Use the properties/{property_id} endpoint.
+When a user clicks on a property in the list it takes them to a page that displays all the property's detailed information.
 
 <details><summary>Show Image</summary>
 <p>
