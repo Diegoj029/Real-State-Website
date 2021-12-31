@@ -42,6 +42,3 @@ def property(property_id, image_index=1):
     return render_template("property.html", public_id = property['public_id'], title = property['title'], 
                             property_type = property['property_type'], location = property['location']['name'], 
                             description = property['description'], images = images, num_images = len(images), image_index = image_index-1, form = form)
-
-if __name__ == '__main__':
-    app.run(debug=True)
