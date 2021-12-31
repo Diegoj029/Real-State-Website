@@ -96,13 +96,12 @@ The form may warn when there's an unfilled information field:
 
 ## Instalation guide
 1. Install [Python 3.6+](https://www.python.org/downloads/).
-2. Install [Requests](https://docs.python-requests.org/en/latest/), [Flask](https://flask.palletsprojects.com/en/2.0.x/), and [Flask_WTF](https://flask-wtf.readthedocs.io/en/1.0.x/). You may use the following code:
+2. Install [Requests](https://docs.python-requests.org/en/latest/), [Flask](https://flask.palletsprojects.com/en/2.0.x/), and [Flask_WTF](https://flask-wtf.readthedocs.io/en/1.0.x/). You may use the following code (Make sure you're in the repo directory):
 
     ```
     pip install -r requirements.txt
     ```
 
-(Make sure you're in the repo directory.)
 3. Run app.py
 4. Open the localhost location (You may find it in the console after running the program.)
 5. Enjoy!
