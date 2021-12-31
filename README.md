@@ -113,4 +113,4 @@ The communication with the API was somehow hard since my methods kept getting er
 
 The code ended up being quite a mess with functions being called everywhere, but it was designed this way to avoid making a single large script. By using OOP, most functionalities go through a method as it is repeated plenty of times. Jinja also allowed me to use hierarchies in HTML to avoid repeating the header and footer on both pages by using a template. 
 
-With more time to planify, I'm sure the UI/UX could've been better. Currently it's somewhat confusing as not everything is as reactive as planned.
+With more time to planify, I'm sure the UI/UX could've been better. Currently it's somewhat confusing as not everything is as reactive as planned, and the distribution feels odd.
