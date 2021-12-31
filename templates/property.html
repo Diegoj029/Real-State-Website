@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="row">
+    <div class="col-12">
+        <h2>{{ title }}</h2>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <div class="photoGalleryBlock">
+                <div class="largePic">
+                    <a href="#" class="prev">prev</a>
+                    <a href="#" class="next">next</a>
+                    <img class="photo" src="{{ images[0][0] }}" title="{{ images[0][1] }}" width="600px">
+                </div>
+                <ul class="reset photoGalleryThumbs">
+                    <li>
+                        <a href="#" class="thumb active">
+                            <span class="photo">
+                                <img class="photo" src="{{ images[0][0] }}" title="{{ images[0][1] }}" width="90px">
+                            </span>		
+                        </a>
+                    </li>
+                    {% if num_images > 1 %}
+                        {% for image in images[1:] %}					
+                            <li>
+                                <a href="#" class="thumb">
+                                    <span class="Photo">
+                                        <img class="photo" src="{{ image[0] }}" title="{{ image[1] }}" width="90px">
+                                    </span>		
+                                </a>
+                            </li>
+                        {% endfor %}
+                    {% endif %}												
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <h6>{{ public_id }}</h6>
+            <h3>Tipo:</h3>
+            <h4>{{ property_type }}</h4>
+            <h3>Ubicación:</h3>
+            <h4>{{ location }}</h4>
+        </div>
+    </div>
+    <br>
+    <div class="col-12">
+        <h3>Descripción</h3> 
+        <h4>{{ description }}</h4>
+    </div>
+    <br><hr>
+    <div class="col-12">
+        <section id="contact-us" class="contact">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                    <h3>¿Te interesa? ¡Contáctanos!</h3>
+                </div>
+              </div>
+              <form method="POST">
+                {{ form.csrf_token }}
+                <div class="row">
+                    <div class="col-12 col-lg-6 data">
+                        {{ form.name.label }}
+                        {{ form.name() }}
+                    </div>
+                    <div class="col-12 col-lg-6 data">
+                        {{ form.phone.label }}
+                        {{ form.phone() }}
+                    </div>
+                    <div class="col-12 col-lg-6 data">
+                        {{ form.email.label }}
+                        {{ form.email() }}<br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 message">
+                        {{ form.message.label }}
+                        {{ form.message() }}<br>
+                    </div>
+                    <div class="col-12">
+                    <div class="hero-btns contact-btn">
+                        <!-- Send Message Btn -->
+                        <button>Enviar mensaje</button>
+                    </div>
+                    </div>
+                </div>
+               </form>
+            </div>
+          </section>
+          
+    <!-- Flash response for popup message -->
+      {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msgs in messages %}
+                    <div class="alert alert-info" role="alert">
+                        {{msgs}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+</div>
+      
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="row">
+    <div class="col-12">
+    <!-- HERO SECTION (ONLY ON PAGE 1)-->    
+    {% if page_number == 1: %}
+        <div class="container-fluid hero">
+        <img src="{{ url_for('static', filename='images/hero.svg') }}" alt="">
+        <div class="container">
+            <!-- Hero Title -->
+            <h1>Las llaves a tu<br>nuevo hogar.</h1>
+            <!-- Hero Title Info -->
+            <p>Encuentra tu próxima casa aquí:</p>
+            <div class="hero-btns">
+                <!-- Hero Btn First -->
+                <a data-scroll href="#properties">Descubrir</a>
+              </div>
+        </div>
+    {% endif %}
+    </div>
+    <div class="col-12">
+    <!-- PROPERTIES -->
+    <section id="properties" class="properties_list">
+        <div class="container-fluid">
+            <h3>Inmuebles disponibles</h3>
+            <h4>Total: {{ total_properties }}</h4>
+            <hr>
+
+            {% if total_properties > 0 : %}
+                {% for index in num_properties %}
+                    <a href="/property/{{ public_id[index] }}">
+                        <div class="row">
+                            <div id="{{ title[index] }}" class="col-12">
+                                <div class="col-12 col-lg-6">
+                                    <img src = "{{ img_thumbnail[index] }}" height="100">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <h3>{{ title[index] }}</h3>
+                                    <h6>{{ public_id[index] }}</h6>
+                                    <h4>Tipo: {{ property_type[index] }}</h4> <br>
+                                    <h5>Ubicación: {{ location[index] }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <br><hr>
+                {% endfor %}
+            {% else: %}
+                <h3>Lo sentimos, aún no tenemos inmuebles disponibles</h3>
+            {% endif %}
+        </div>
+    </section>
+    </div>
+    <div class="col-12">
+    <section id="page-nav" class="contact">
+        <div class="container-fluid">
+            <div class="hero-btns contact-btn">
+                {% if page_number-1 > 0: %}
+                        <a href="/page={{ page_number - 1 }}"> Página anterior </a>
+                {% endif %}
+                {% if total_pages>=page_number + 1 : %}
+                    <a href="/page={{ page_number + 1 }}"> Página siguiente </a>    
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    </div>
+</div>
+{% endblock %}
